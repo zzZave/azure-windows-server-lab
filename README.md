@@ -1,4 +1,4 @@
-# Azure Windows Server Lab
+# Azure-Hosted Active Directory & Windows Server Administration Lab
 
 ## Goal
 Built a Windows Server domain on Azure with Active Directory, organizational units, users, groups, and a Group Policy.
