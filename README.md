@@ -5,7 +5,7 @@ Built a Windows Server domain on Azure with Active Directory, organizational uni
 
 ## Environment
 - Platform: Microsoft Azure
-- OS: Windows Server 2022 Datacenter
+- OS: Windows (Windows Server 2025 Datacenter)
 - VM size: Standard B2s
 - Domain: lab.local
 
