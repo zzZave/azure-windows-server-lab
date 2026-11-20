@@ -98,13 +98,15 @@ Created a Group Policy Object named `Sales-Restrictions` and linked it to the Sa
 
 **Testing limitation:** I have not yet confirmed that the Group Policy applies to Sales users. This would need a separate domain-joined Windows client.
 
-## Problems and Fixes
+## Design Decisions
 
-| Issue | Fix |
+| Decision | Reason |
 |---|---|
-| VM status looked outdated after starting | Waited for Azure to update and refreshed the portal |
-| VM Overview page was blank | Opened the VM from the Virtual Machines list and did a hard refresh |
-| VM agent status showed "Not ready" | Waited a few minutes after the restart until it reported normally |
+| Limited RDP to my own IP | Leaving port 3389 open to the internet exposes the server to attacks |
+| Used security groups (GRP-Sales, GRP-IT) | Permissions and policies are easier to manage by group than per user |
+| Linked the GPO to the Sales OU only | Keeps the policy limited to one department, with IT as an untouched comparison |
+| Turned on auto-shutdown and a budget alert | Keeps cloud costs under control |
+| Chose B2s over B2ats | B2ats has only 1 GB of RAM, which is too little for a domain controller |
 
 ## What I Learned
 
